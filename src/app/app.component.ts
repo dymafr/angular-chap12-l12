@@ -17,6 +17,13 @@ export class AppComponent implements OnInit, OnDestroy {
   public form: FormGroup;
   public subscriptions = new Subscription();
 
+  public cities = [
+    { value: "paris", label: "Paris" },
+    { value: "lyon", label: "Lyon" },
+    { value: "nice", label: "Nice" },
+    { value: "toulouse", label: "Toulouse" }
+  ];
+
   constructor(private fb: FormBuilder) {}
 
   get hobbies() {
@@ -44,7 +51,10 @@ export class AppComponent implements OnInit, OnDestroy {
       nom: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
       hobbies: this.fb.array([]),
-      password: [""]
+      password: [""],
+      gender: ["female"],
+      majeur: [true],
+      cities: [""]
     });
   }
 
