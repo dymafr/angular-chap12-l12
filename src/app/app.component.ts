@@ -54,7 +54,7 @@ export class AppComponent implements OnInit, OnDestroy {
       password: [""],
       gender: ["female"],
       majeur: [true],
-      cities: [""]
+      city: [""]
     });
   }
 
